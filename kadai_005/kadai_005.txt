@@ -1,38 +1,22 @@
-takebeyuuichirou@MacBook-Pro git_challenge % cat ~/kadai_005/kadai_005.txt
-/Users/takebeyuuichirou/.zshrc:1: job table full or recursion limit exceeded
+takebeyuuichirou@MacBook-Pro ~ % mkdir git_challenge
 takebeyuuichirou@MacBook-Pro ~ % cd git_challenge
-takebeyuuichirou@MacBook-Pro git_challenge % 
 takebeyuuichirou@MacBook-Pro git_challenge % git init
-Reinitialized existing Git repository in /Users/takebeyuuichirou/git_challenge/.git/
-takebeyuuichirou@MacBook-Pro git_challenge % 
-takebeyuuichirou@MacBook-Pro git_challenge % echo Hello, world! > hello_world.txt
-takebeyuuichirou@MacBook-Pro git_challenge % ls -l
-total 8
--rw-r--r--  1 takebeyuuichirou  staff  14  2  4 16:48 hello_world.txt
-takebeyuuichirou@MacBook-Pro git_challenge % ls -a
-.               ..              .git            hello_world.txt
-takebeyuuichirou@MacBook-Pro git_challenge % ls
-hello_world.txt
+Initialized empty Git repository in /Users/takebeyuuichirou/git_challenge/.git/
+takebeyuuichirou@MacBook-Pro git_challenge % echo "Hello, world!" > hello_world.txt
+dquote>                                                       
+takebeyuuichirou@MacBook-Pro git_challenge % echo Hello, world! > hello_world.txt 
+takebeyuuichirou@MacBook-Pro git_challenge % git add hello_world.txt
+takebeyuuichirou@MacBook-Pro git_challenge % git commit -m
+error: switch `m' requires a value
+takebeyuuichirou@MacBook-Pro git_challenge % git commit -m "hello_world.txtを追加"
+[main (root-commit) 350b190] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
 takebeyuuichirou@MacBook-Pro git_challenge % echo "こんにちは、世界！" >> hello_world.txt
 takebeyuuichirou@MacBook-Pro git_challenge % git add hello_world.txt
-takebeyuuichirou@MacBook-Pro git_challenge % git commit -m "日本語訳を追記"
-[main (root-commit) 212ea9e] 日本語訳を追記
- 1 file changed, 2 insertions(+)
- create mode 100644 hello_world.txt 
-takebeyuuichirou@MacBook-Pro git_challenge % echo Hello, world! >> hello_world.txt
-takebeyuuichirou@MacBook-Pro git_challenge % git add hello_world.txt
-takebeyuuichirou@MacBook-Pro git_challenge % git commit -m "hello_world.txtを追加"
-[main 4d431be] hello_world.txtを追加
+takebeyuuichirou@MacBook-Pro git_challenge % git commit -m "日本語訳を追加"
+[main c5f4d74] 日本語訳を追加
  1 file changed, 1 insertion(+)
-takebeyuuichirou@MacBook-Pro git_challenge % git log
-commit 4d431be0ceb78ac98ef580ff37d649cb0db794f7 (HEAD -> main)
-Author: from2339 <mountplay@gmail.com>
-Date:   Tue Feb 4 16:57:16 2025 +0900
-
-    hello_world.txtを追加
-
-commit 212ea9ec707f34ddf9bd9dfce75e6d6c6a536c4d
-Author: from2339 <mountplay@gmail.com>
-Date:   Tue Feb 4 16:55:42 2025 +0900
-
-    日本語訳を追記
+takebeyuuichirou@MacBook-Pro git_challenge % git log --oneline
+c5f4d74 (HEAD -> main) 日本語訳を追加
+350b190 hello_world.txtを追加
